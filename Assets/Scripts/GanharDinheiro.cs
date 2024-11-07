@@ -8,6 +8,7 @@ public class GanharDinheiro : MonoBehaviour
 {
     public TextMeshProUGUI dinheiroText;
     public Buy buy;
+    public BuyUpgrades upgradeModf;
     float _dinheiro;
 
     // Start is called before the first frame update
