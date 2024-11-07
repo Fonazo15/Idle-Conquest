@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class Comprar : Buy
+public class Buy : MonoBehaviour
 {
-
-    [Header("Events")]
-    public UnityEvent onCapangaBuyEvent;
+    public bool isBought;
+    public float progress = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +15,15 @@ public class Comprar : Buy
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    IEnumerator ProgressCotinue()
+    {
         if(isBought)
         {
-        onCapangaBuyEvent.Invoke();
+            progress++;
         }
+        yield return new WaitForSeconds(0.5f);
     }
 }
