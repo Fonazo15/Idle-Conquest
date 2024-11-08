@@ -1,15 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.UI;
+using TMPro;
 
 public class BuyUpgrades : MonoBehaviour
 {
-    [Header ("Events")]
-    public UnityEvent onBuyUpgrEvent;
+    public GanharDinheiro dinheiroPlayer;
 
-    public void InvokeUpgrade()
+    public TextMeshProUGUI comprarUpgradeTxt;
+
+    public Button comprarUpgradeBtn;
+
+    bool isUpBought;
+    public void Upgrade()
     {
-        onBuyUpgrEvent.Invoke();
+        if(dinheiroPlayer._dinheiro == 5)
+        {
+            dinheiroPlayer.dinheiroMultply += 1.2f;
+            isUpBought = true;
+        }
+        if (isUpBought)
+        {
+            comprarUpgradeTxt.text = "Comprado!";
+            comprarUpgradeBtn.interactable = false;
+        }
     }
 }
