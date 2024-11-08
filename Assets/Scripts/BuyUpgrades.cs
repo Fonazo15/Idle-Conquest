@@ -24,6 +24,7 @@ public class BuyUpgrades : MonoBehaviour
         {
             comprarUpgradeTxt.text = "Comprado!";
             comprarUpgradeBtn.interactable = false;
+            dinheiroPlayer._dinheiro -= 5;
         }
     }
 }
