@@ -17,12 +17,12 @@ public class Buy : MonoBehaviour
 
     public IEnumerator ProgressCotinue()
     {
-        if(progress < 10)
+        if(progress < progressSlider.maxValue)
         {
             progress++;
             progressSlider.value = progress;
         }
-        else if (progress >= 10)
+        else if (progress >= progressSlider.maxValue)
         {
             progress = 0;
             progressSlider.value = progress;

@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class GanharDinheiro : MonoBehaviour
 {
+    [Header ("Events")]
+    public UnityEvent onGetEnoughForEvent;
     public TextMeshProUGUI dinheiroText;
     public Buy buy;
     public BuyUpgrades upgradeModf;
