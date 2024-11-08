@@ -12,7 +12,7 @@ public class UpdTextAsc : MonoBehaviour
     public int pontosAsc;
     public bool hasAsc;
 
-    bool canAscend;
+    bool canAscend = true;
     float tempDinheiro;
 
     private void Start()
@@ -23,7 +23,7 @@ public class UpdTextAsc : MonoBehaviour
     {
         tempDinheiro = dinheiroForAsc._dinheiro;
 
-        if (tempDinheiro >= 10)
+        if (tempDinheiro >= 10 && tempDinheiro <= 11)
         {
             canAscend = true;
         }
