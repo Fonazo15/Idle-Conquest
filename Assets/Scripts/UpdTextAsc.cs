@@ -17,31 +17,21 @@ public class UpdTextAsc : MonoBehaviour
 
     private void Start()
     {
-        pontosAscTxt.text = "Voc� ainda n�o tem dinheiro para ascender";
+        pontosAscTxt.text = "Voce ainda nao tem dinheiro para ascender";
     }
     public void CheckForDinheiro()
     {
         tempDinheiro = dinheiroForAsc._dinheiro;
 
-        switch(tempDinheiro)
+        if (tempDinheiro >= 10)
         {
-            case >= 10:
-                canAscend = true;
-                break;
-            case >= 20:
-                canAscend = true;
-                break;
-            case >= 40:
-                canAscend = true;
-                break;
-            default:
-                break;
+            canAscend = true;
         }
 
         if (canAscend)
         {
             pontosAsc++;
-            pontosAscTxt.text = pontosAsc.ToString() + " Pontos de Ascen��o ser�o ganhados";
+            pontosAscTxt.text = pontosAsc.ToString() + " Pontos de Ascensao serao ganhados";
             canAscend = false;
         }
     }
